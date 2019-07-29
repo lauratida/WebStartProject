@@ -1,2 +1,28 @@
+*
+  box-sizing: border-box
+body
+  font-family: "Museo Sans Cyrillic", sans-serif
+img
+  max-width: 100%
 .container
-  max-width: 1140px
+  max-width: 1170px
+  margin: auto
+@media (max-width: 1200px)
+  .container
+    max-width: 720px
+@media (max-width: 768px)
+  .container
+    max-width: 540px
+  .navbar-contacts
+    display: none
+@media (max-width: 567px)
+  .container
+    max-width: 277px
+.button
+  background-color: $main-color
+  border: none
+  padding: 18px 30px
+  border-radius: 10px
+  font-size: 13px
+  font-weight: 700
+  color: $color-text

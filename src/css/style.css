@@ -1,9 +1,120 @@
-.container {
-  max-width: 1140px;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-family: "Museo Sans Cyrillic", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .navbar-contacts {
+    display: none;
+  }
+}
+
+@media (max-width: 567px) {
+  .container {
+    max-width: 277px;
+  }
+}
+
+.button {
+  background-color: #ffd200;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.navbar-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 7px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #333333;
+}
+
+.navbar-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.navbar__adress {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
+.navbar__phone {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.navbar__button {
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .navbar-contacts {
+    display: none;
+  }
+  .navbar__logo {
+    width: 91px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar__button {
+    font-size: 10px;
+    padding: 15px 26px;
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
