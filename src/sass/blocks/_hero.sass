@@ -14,15 +14,15 @@
     &__title
       color: $color-text
       font-size: 41px
-      font-weight: 700
+      +bold
       line-height: 55px
       // max-width: 500px
-      margin-left: -1px
-      letter-spacing: 0.1px
-      margin-bottom: 18px
+      margin-left: -3px
+      // letter-spacing: 0.1px
+      margin-bottom: 16px
     &__subtitle
       font-size: 20px
-      font-weight: 700
+      +bold
       line-height: 65px
   &-list
     list-style-type: none
@@ -38,16 +38,20 @@
         margin-top: 22px
     &__img
       // display: inline-block
+      // display: flex
+      // align-items: center
     &__text
       // display: inline-block
       font-size: 14px
-      font-weight: 400
       line-height: 24px
       max-width: 261px
       margin-left: 30px
+      margin-top: -1px
   &-img
     // max-width: 570
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)
+    img
+      margin-top: -2px
 @media (max-width: 1200px)
   .hero-block
     align-items: center
