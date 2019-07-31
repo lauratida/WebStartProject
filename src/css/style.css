@@ -261,15 +261,17 @@ img {
   }
   .hero-text__title {
     font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 11px;
+    line-height: 27px;
+    margin-bottom: 8px;
+    margin-left: 5px;
   }
   .hero-text__subtitle {
     font-size: 16px;
     line-height: 20px;
+    margin-left: 6px;
   }
   .hero-list {
-    margin-top: 0px;
+    margin-top: 4px;
   }
   .hero-list__img {
     width: 40px;
@@ -280,9 +282,11 @@ img {
     line-height: 16px;
     margin-left: 15px;
     max-width: 210px;
+    margin-top: 3px;
   }
   .hero-list__item {
-    margin-top: 22px;
+    margin-top: 21px;
+    margin-left: 2px;
   }
   .hero-img {
     margin-top: 20px;
