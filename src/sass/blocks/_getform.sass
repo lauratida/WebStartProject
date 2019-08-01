@@ -1,0 +1,64 @@
+.getform
+  margin: 0 0 0 0
+.call
+  width: 50%
+  position: relative
+  padding: 76px 90px 88px 0
+  // border: 1px solid red
+  &__title
+    font-size: 24px
+    +bold
+    line-height: 35px
+    max-width: 365px
+    margin: 0px 0 0 0
+  &__text
+    display: inline-block
+    +reg
+    font-size: 16px
+    max-width: 235px
+    margin: 20px -2px 31px 0
+  &-desc
+    display: flex
+    justify-content: space-between
+    align-items: center
+    & span:last-child
+      flex-basis: 40.5%
+      letter-spacing: -0.5px
+    &__text
+      display: inline-block
+      margin-top: 26px
+      flex-basis: 48%
+      line-height: 24px
+      margin-left: -3px
+      letter-spacing: -0.4px
+      strong
+        +bold
+        display: block
+    
+.form-call
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  &__input
+    margin-bottom: 29px
+.call__button
+  flex-basis: 100%
+  font-size: 16px
+  padding: 25px 27px 27px 27px
+  margin-left: -1px
+  letter-spacing: -0.2px
+  &__phone
+    padding: 20px 58px 20px 30px
+  // & input
+  //   margin-bottom: 29px
+
+.call:after
+  content: url('../img/call_img.jpg')
+  display: block
+  // background-image: url('../img/call_img.jpg')
+  height: 100%
+  width: 49.5vw
+  position: absolute
+  left: 100%
+  top: 0%
+  overflow: hidden

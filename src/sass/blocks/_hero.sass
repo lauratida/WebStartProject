@@ -1,10 +1,11 @@
 .hero
   background-color: $bg-color
+  margin: 0 0 0 0
   &-block
     display: flex
     justify-content: space-between
     padding-top: 50px
-    padding-bottom: 50px
+    padding-bottom: 47px
 
   &-text
     flex-basis: 50%
@@ -30,6 +31,7 @@
     // flex-direction: column
     padding: 0
     margin-top: 22px
+    margin-bottom: 0
     &__item
       display: flex
       align-items: center
@@ -52,45 +54,39 @@
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05)
     img
       margin-top: -2px
-@media (max-width: 1200px)
-  .hero-block
-    align-items: center
-@media (max-width: 992px)
-  .hero-block
-    flex-direction: column
-// @media (max-width: 768px)
-  
-// @media (max-width: 567px)
-  
-@media (max-width: 420px)
-  .hero
-    &-block
-      padding-top: 40px
-    &-text
-      &__title
-        font-size: 22px
-        line-height: 27px
-        margin-bottom: 8px
-        margin-left: 5px
-      &__subtitle
-        font-size: 16px
-        line-height: 20px
-        margin-left: 6px
-    &-list
-      margin-top: 4px
-      &__img
-        width: 40px
-        height: 40px
-      &__text
-        font-size: 12px
-        line-height: 16px
-        margin-left: 15px
-        max-width: 210px
-        margin-top: 3px
-      &__item
-        margin-top: 21px
-        margin-left: 2px
-    &-img
-      margin-top: 20px
-
-  
+// @media (max-width: 1200px)
+//   .hero-block
+//     align-items: center
+// @media (max-width: 992px)
+//   .hero-block
+//     flex-direction: column
+// @media (max-width: 420px)
+//   .hero
+//     &-block
+//       padding-top: 40px
+//     &-text
+//       &__title
+//         font-size: 22px
+//         line-height: 27px
+//         margin-bottom: 8px
+//         margin-left: 5px
+//       &__subtitle
+//         font-size: 16px
+//         line-height: 20px
+//         margin-left: 6px
+//     &-list
+//       margin-top: 4px
+//       &__img
+//         width: 40px
+//         height: 40px
+//       &__text
+//         font-size: 12px
+//         line-height: 16px
+//         margin-left: 15px
+//         max-width: 210px
+//         margin-top: 3px
+//       &__item
+//         margin-top: 21px
+//         margin-left: 2px
+//     &-img
+//       margin-top: 20px

@@ -8,24 +8,6 @@ img
 .container
   max-width: 1170px
   margin: auto
-@media (max-width: 1200px)
-  .container
-    max-width: 980px
-@media (max-width: 992px)
-  .container
-    max-width: 760px  
-@media (max-width: 768px)
-  .container
-    max-width: 540px
-  .navbar-contacts
-    display: none
-@media (max-width: 567px)
-  .container
-    max-width: 410px
-@media (max-width: 420px)
-  .container
-    max-width: 277px  
-
 .button
   background-color: $main-color
   border: none
@@ -34,7 +16,18 @@ img
   font-size: 13px
   +bold
   color: $color-text
-@media (max-width: 420px)
-  .button
-    padding: 14px 26px
-    border-radius: 5px
+  outline: none
+  &:hover
+    cursor: pointer
+    background-color: lighten($main-color, 20%)
+.input
+  border-radius: 10px
+  border: 1px solid $input-border
+  color: $input-text
+  +reg
+  font-size: 15px
+  line-height: 24px
+  padding: 20px 63px 20px 23px
+  &:focus
+    border: 1px solid $main-color
+    outline: none
