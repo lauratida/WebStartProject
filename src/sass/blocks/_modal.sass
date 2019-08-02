@@ -16,12 +16,15 @@
     background-color: $white
     position: relative
     display: flex
-    justify-content: space-between
+    // justify-content: str
     
     &__close
       position: absolute
       top: 0
       right: 0
+      width: 50px
+      height: 50px
+      border: none
 .dialog
   &-desc
     flex-basis: 51.3%
@@ -88,12 +91,13 @@
   &-form
     display: flex
     flex-direction: column
-    padding: 74px 100px 76px 100px
+    padding: 74px 100px 76px 99px
     text-align: center
+    flex-basis: 48.7%
     & input:last-of-type
       margin-bottom: 26px
     &__title
-      max-width: 300px
+      max-width: 340px
       margin: 0 auto
       +bold
       line-height: 33px
@@ -114,6 +118,7 @@
       font-size: 15px
       line-height: 20px
       margin-bottom: 10px
+      max-width: 300px
     &__phone
       +bold
       font-size: 24px
