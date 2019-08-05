@@ -10,7 +10,7 @@
 </head>
 <body>
   
-  <nav class="navbar">
+  <nav class="navbar" id='scroll'>
     <div class="container">
       <div class="navbar-block">
         <div class="navbar__logo">
@@ -32,7 +32,7 @@
   </nav>
   <!-- /.navbar -->
 
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="container">
       <div class="hero-block">
         <div class="hero-text">
@@ -85,7 +85,7 @@
   <div class="modal" id="modal1">
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="closemodal">&times;</button>
-      <div class="dialog-desc">
+      <!-- <div class="dialog-desc">
 
         <div class="dialog-desc-card dialog-desc-card_top">
           <div class="dialog-desc__img"><img src="img/modal/modal1-1.jpg" alt=""></div>
@@ -123,7 +123,7 @@
             <li class="dialog-desc-text__item">Монтаж двери с коробкой</li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <!-- /.dialog-desc -->
       <div class="dialog-form">
         <h3 class="dialog-form__title">Узнайте точную стоимость ремонта по телефону!</h3>
@@ -138,6 +138,13 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <div class="container">
+    <nav class="navigation">
+      <button class="button" id="scrollbutton">Наверх</button>
+    </nav>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html>
