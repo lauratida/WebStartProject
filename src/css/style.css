@@ -321,8 +321,6 @@ img {
 
 .modal-dialog {
   margin: auto;
-  height: 674px;
-  min-width: 400px;
   background-color: #ffffff;
   position: relative;
   display: -webkit-box;
@@ -597,6 +595,36 @@ img {
   .container {
     max-width: 410px;
   }
+  .dialog-form {
+    padding: 34px 50px 34px 49px;
+    max-width: 410px;
+  }
+  .dialog-form__title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .dialog-form__subtitle {
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .dialog-form input {
+    padding: 10px 0 10px 23px;
+  }
+  .dialog-form input:last-of-type {
+    margin-bottom: 16px;
+  }
+  .dialog-form__button {
+    font-size: 14px;
+    padding: 16px 0;
+    margin-bottom: 19px;
+  }
+  .dialog-form__text {
+    font-size: 12px;
+  }
+  .dialog-form__phone {
+    font-size: 21px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -675,6 +703,20 @@ img {
   }
   .form-call input {
     padding: 18px 0 19px 23px;
+  }
+  .dialog-form {
+    width: 277px;
+  }
+  .dialog-form__title {
+    font-size: 13px;
+    line-height: 24px;
+  }
+  .dialog-form__subtitle {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .dialog-form__phone {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */
