@@ -59,12 +59,26 @@ img {
   font-weight: 300;
   font-size: 15px;
   line-height: 24px;
-  padding: 20px 63px 20px 23px;
+  padding: 20px 23px 20px 23px;
 }
 
 .input:focus {
   border: 1px solid #ffd200;
   outline: none;
+}
+
+.bold {
+  font-family: 'Museo Sans Cyrl 700';
+  font-weight: 700;
+}
+
+#scrollbutton {
+  font-size: 38px;
+  padding: 10px 10px 10px 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: none;
 }
 
 .navbar-block {
@@ -261,7 +275,7 @@ img {
 .call-desc__text strong {
   font-family: 'Museo Sans Cyrl 700';
   font-weight: 700;
-  display: block;
+  display: inline-block;
 }
 
 .form-call {
@@ -277,6 +291,8 @@ img {
 
 .form-call__input {
   margin-bottom: 29px;
+  -ms-flex-preferred-size: 48.5%;
+      flex-basis: 48.5%;
 }
 
 .call__button {
@@ -502,6 +518,17 @@ img {
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
+}
+
+.modal-success {
+  margin: auto;
+  width: 670px;
+  height: 200px;
+  background-color: #ffffff;
+  position: relative;
+  text-align: center;
+  padding: 74px 150px;
+  line-height: 1.8;
 }
 
 .navigation {

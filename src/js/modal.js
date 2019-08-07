@@ -26,6 +26,19 @@ $(document).ready(function(){
     $("html, body").animate({ scrollTop: scroll }, 600);
     return false;
   });
+  $(window).scroll(function() {
+ 
+    if($(this).scrollTop() != 0) {
+     
+    $('#scrollbutton').fadeIn();
+     
+    } else {
+     
+    $('#scrollbutton').fadeOut();
+     
+    }
+     
+    });
 
   // Проверка метода по скроллу к нужному месту.
   // $('#herobutton').on('click', function(){
