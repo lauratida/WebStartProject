@@ -81,6 +81,10 @@ img {
   display: none;
 }
 
+.span-block {
+  display: block;
+}
+
 .navbar-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,7 +227,7 @@ img {
 .call {
   width: 50%;
   position: relative;
-  padding: 76px 90px 88px 0;
+  padding: 76px 90px 87px 0;
 }
 
 .call__title {
@@ -317,6 +321,41 @@ img {
   left: 100%;
   top: 0%;
   overflow: hidden;
+}
+
+.portfolio {
+  background: #f5f5f5 url("../img/portfolio/portfolio-bg.jpg") repeat-y center left;
+  background-size: 50%;
+  padding: 90px 0 97px 0;
+}
+
+.portfolio-contain {
+  max-width: 1230px;
+  padding-left: 30px;
+}
+
+.portfolio__title {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 90px;
+  font-family: 'Museo Sans Cyrl 700';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  margin-bottom: 92px;
+  letter-spacing: -0.5px;
+}
+
+.arrows {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 118px;
+  margin-top: 68px;
 }
 
 .modal {
@@ -538,6 +577,12 @@ img {
 @media (max-width: 1200px) {
   .container {
     max-width: 980px;
+  }
+  .slider__img {
+    margin: auto;
+  }
+  .portfolio-contain {
+    padding: 0;
   }
   .hero-block {
     -webkit-box-align: center;
