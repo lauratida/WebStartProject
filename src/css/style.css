@@ -791,4 +791,22 @@ img {
     font-size: 18px;
   }
 }
+
+.portfolio {
+  padding: 42px 0 97px 0;
+}
+
+.portfolio__title {
+  font-size: 18px;
+  line-height: 21.6px;
+  margin-bottom: 40px;
+}
+
+.slider__img {
+  width: 246px;
+}
+
+.arrows {
+  margin-top: 46px;
+}
 /*# sourceMappingURL=style.css.map */
