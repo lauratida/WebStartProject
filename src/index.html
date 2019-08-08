@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -60,27 +63,54 @@
       <!-- /.hero-block -->
     </div>
     <!-- /.container -->
-  </section><!-- /.hero 
-  --><section class="getform">
+  </section>
+  <!-- /.hero 
+  -->
+
+  <section class="getform">
     <div class="container">
       <div class="call">
         <h1 class="call__title">Мы бесплатно разработаем <wbr>дизайн-проект Вашего жилья <wbr>и&nbsp;реализуем&nbsp;его!</h1>
         <span class="call__text">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
-        <form action="#" class="form-call">
-          <input type="text" placeholder='Ваше имя' class="input form-call__input form-call__name">
-          <input type="tell" placeholder='Ваш телефон' class="input form-call__input form-call__phone">
+        <form action="#" id="call-form" class="form-call">
+          <input type="text" name="username" id="username" placeholder='Ваше имя' class="input form-call__input form-call__name">
+          <input type="tell" name="userphone" id="userphone" placeholder='Ваш телефон' class="input form-call__input form-call__phone">
           <button class="button call__button">Получить бесплатный<wbr> дизайн-проект</button>
         </form>
 
         <div class="call-desc">
-          <span class="call-desc__text">Наш менеджер перезвонит Вам <wbr>в&nbsp;течение 60 секунд</span>
-          <span class="call-desc__text">или перезвоните нам сами <strong>+7 (495) 42-251-31</strong></span>
+          <span class="call-desc__text call-desc__text1">Наш менеджер перезвонит Вам <wbr>в&nbsp;течение 60 секунд</span>
+          <span class="call-desc__text call-desc__text2">или перезвоните нам сами <strong>+7 (495) 42-251-31</strong></span>
         </div>
       </div>
     </div>
     <!-- /.container -->
   </section>
   <!-- /.getform -->
+
+  <section class="portfolio">
+    <div class="container">
+      <h2 class="portfolio__title"> 
+        <span class="span-block">Работая с 2007 года,</span>
+        <span class="span-block">мы сделали более 500 ремонтов в квартирах и домах</span>  </h2>  
+    </div>
+    <div class="container portfolio-contain">
+        <div class="slider">
+            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-1.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-2.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-3.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-1.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-2.jpg" alt=""></div>
+            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-3.jpg" alt=""></div>
+          </div>
+    </div>
+    <div class="arrows">
+        <div class="arrows__left"><img src="img/portfolio/left-arrow.png" alt=""></div>
+        <div class="arrows__right"><img src="img/portfolio/right-arrow.png" alt=""></div>
+    </div>
+    
+  </section>
+
 
   <div class="modal" id="modal1">
     <div class="modal-dialog">
@@ -125,26 +155,64 @@
         </div>
       </div> -->
       <!-- /.dialog-desc -->
-      <div class="dialog-form">
+      <form id="dialog-form" class="dialog-form">
         <h3 class="dialog-form__title">Узнайте точную стоимость ремонта по телефону!</h3>
         <p class="dialog-form__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
-        <input type="text" class='input dialog-form__input' placeholder="Ваше имя">
-        <input type="tell" class='input dialog-form__input' placeholder="Ваш телефон">
+        <input type="text" name="username" id="usernamed" class='input dialog-form__input' placeholder="Ваше имя">
+        <input type="tell" name="userphone" id="userphoned" class='input dialog-form__input' placeholder="Ваш телефон">
         <button class="button dialog-form__button">Узнать стоимость</button>
         <span class="dialog-form__text">Или Вы можете перезвонить нам сами по&nbsp;телефону:</span>
         <span class="dialog-form__phone">+7 (8182) 42-51-31</span>
-      </div>
+      </form>
       <!-- /.dialog-form -->
     </div>
   </div>
 
-  <div class="container">
-    <nav class="navigation">
-      <button class="button" id="scrollbutton">Наверх</button>
-    </nav>
+  <div class="modal" id="modal-succes">
+    <div class="modal-success">
+      <button class="modal-dialog__close" id="closesuccessmodal">&times;</button>
+      <span id="sucess-user">Спасибо</span>
+      <span>, наш менеджер перезвонит Вам&nbsp;в&nbsp;течение 60 секунд </span>
+    </div>
   </div>
 
+
+  
+  <button class="button" id="scrollbutton"><i class="fas fa-arrow-circle-up"></i></button>
+  
+
+  <script src="https://kit.fontawesome.com/185b8e7a1f.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      prevArrow: $('.arrows__left'),
+      nextArrow: $('.arrows__right'),
+      responsive: [
+        
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+    });
+  });
+  </script>
 </body>
 </html>
