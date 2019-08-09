@@ -5,6 +5,9 @@ body
   color: $color-text
 img
   max-width: 100%
+a 
+  text-decoration: none
+  color: $color-text
 .container
   max-width: 1170px
   margin: auto
@@ -42,3 +45,19 @@ img
   display: none
 .span-block
   display: block
+.section
+  &-title
+    +bold
+    font-size: 30px
+    line-height: 45px
+    margin: auto
+    text-align: center
+    letter-spacing: -0.5px
+    color: $color-black
+  &-subtitle
+    font-size: 20px
+    line-height: 45px
+    margin: auto
+    text-align: center
+    letter-spacing: -0.1px
+    color: $color-black
