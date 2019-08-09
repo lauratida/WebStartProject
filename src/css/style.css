@@ -407,8 +407,8 @@ a {
 }
 
 .animScale {
-  -webkit-animation: scaleOnOff 5s ease infinite;
-          animation: scaleOnOff 5s ease infinite;
+  -webkit-animation: scaleOnOff 5s ease 1;
+          animation: scaleOnOff 5s ease 1;
 }
 
 .price {
