@@ -1,27 +1,16 @@
 
-/* style.css | http://webstartproject/src/css/style.css */
 
-.portfolio__title {
-  /* font-size: 30px; */
-  /* line-height: 45px; */
-  /* margin-bottom: 92px; */
-  font-size: 18px;
-  line-height: 21.6px;
-  margin-bottom: 40px;
+
+/* Inline таблица стилей #10 | http://127.0.0.1:5500/src/index.html */
+!!!!
+.container {
+  text-align: center;
 }
 
-.portfolio {
-  /* padding: 90px 0 97px 0; */
-  padding: 42px 0 97px 0;
-}
 
-@media (max-width: 1200px) {
-  .slider__img {
-    width: 246px;
-  }
-}
 
-.arrows {
-  /* margin-top: 68px; */
-  margin-top: 46px;
+/* Элемент | http://127.0.0.1:5500/src/index.html */
+
+div.card:nth-child(1) > div:nth-child(2) > h4:nth-child(1) {
+  font-size: 14px;
 }
