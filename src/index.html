@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=0b760b5a-a884-4719-93d0-9ef0d583724a&lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -20,13 +21,13 @@
           <img src="img/logo.png" alt="Логотип">
         </div>
         <!-- /.navbar__logo -->
-        <navbar class="navbar-info">
+        <div class="navbar-info">
           <div class="navbar-contacts">
             <span class="navbar__adress">Калуга, Москва, МО</span>
             <a href="tel:+7(495)42-251-31" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
           <button class="button navbar__button animScale" id="navbar-button">Перезвоните мне</button>
-        </navbar>
+        </div>
         <!-- /.info -->
       </div>
       <!-- /.navbar-block -->
@@ -34,7 +35,7 @@
     <!-- /.container -->
   </nav>
   <!-- /.navbar -->
-
+  <main>
   <section class="hero" id="hero">
     <div class="container">
       <div class="hero-block">
@@ -74,7 +75,7 @@
         <span class="call__text">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
         <form action="#" id="call-form" class="form-call">
           <input type="text" name="username" id="username" placeholder='Ваше имя' class="input form-call__input form-call__name">
-          <input type="tell" name="userphone" id="userphone" placeholder='Ваш телефон' class="input form-call__input form-call__phone">
+          <input type="tel" name="userphone" id="userphone" placeholder='Ваш телефон' class="input form-call__input form-call__phone phone">
           <button class="button call__button wow flipInY">Получить бесплатный<wbr> дизайн-проект</button>
         </form>
 
@@ -165,6 +166,180 @@
     </div>
   </section>
 
+  <section class="section steps">
+    <div class="container">
+      <h3 class="section-title steps__title">Наши специалисты готовы выехать на замер в любое удобное для Вас время</h3>
+      <span class="span-block section-subtitle steps__subtitle">5 шагов до ремонта</span>
+      <div class="steps-block">
+        <div class="steps-block__item">
+          <div class="steps-block__img"><img src="img/steps/steps_1.png" alt=""></div>
+          <span class="span-block steps-block__text">Вы звоните нам или&nbsp;оставляете заявку</span>
+        </div>
+        <div class="steps-block__item">
+          <div class="steps-block__img"><img src="img/steps/steps_2.png" alt=""></div>
+          <span class="span-block steps-block__text">Согласуем удобное для&nbsp;Вас время выезда специалиста на&nbsp;замер</span>
+        </div>
+        <div class="steps-block__item">
+          <div class="steps-block__img"><img src="img/steps/steps_3.png" alt=""></div>
+          <span class="span-block steps-block__text">Рассчитываем смету согласовываем<br>с&nbsp;Вами</span>
+        </div>
+        <div class="steps-block__item">
+          <div class="steps-block__img"><img src="img/steps/steps_4.png" alt=""></div>
+          <span class="span-block steps-block__text">Подписываем договор закупаем материал по&nbsp;оптовым ценам</span>
+        </div>
+        <div class="steps-block__item">
+          <div class="steps-block__img"><img src="img/steps/steps_5.png" alt=""></div>
+          <span class="span-block steps-block__text">Выполняем ремонт в&nbsp;указанные сроки</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="features-titlerow"><div class="container"><h3 class="features__title"><span class="span-block mobail_inline">Ремонт обойдется Вам дешевле, так как</span> <span class="span-block mobail_inline">мы используем качественные материалы по оптовым ценам</span></h3></div></div>
+    <div class="container">
+      <div class="discount">
+        <div class="discount__card">
+          <img src="img/features/first_step.jpg" alt="">
+          <span class="discount__text">Поможем закупить все материалы по&nbsp;оптовым ценам у проверенных поставщиков</span>
+        </div>
+        <div class="discount__card">
+          <img src="img/features/second_step.jpg" alt="">
+          <span class="discount__text">Мы дадим Вам максимальные скидки у&nbsp;наших партнеров для закупки материалов оптом</span>
+        </div>
+        <div class="discount__card">
+          <img src="img/features/third_step.png" alt="">
+          <span class="discount__text">Все, что не сможете найти в городе - поможем заказать у проверенных поставщиков</span>
+        </div>
+      </div>
+      <div class="features-subtitlerow"><h3 class="features__subtitle"><span class="span-block mobail_inline">Все наши гарантийные обязательства</span> <span class="span-block mobail_inline">подробно и прозрачно описаны в договоре</span></h3></div>
+      <div class="documents">
+        <div class="documents__card">
+          <div class="documents__img"><img src="img/features/docs_1.jpg" alt=""></div>
+          <span class="span-block documents__text">Гарантия на качество выполняемых работ</span>
+        </div>
+        <div class="documents__card">
+          <div class="documents__img"><img src="img/features/docs_2.jpg" alt=""></div>
+          <span class="span-block documents__text">Гарантия на фиксированные цены Виды работ и цены на них прописаны в договоре</span>
+        </div>
+        <div class="documents__card">
+          <div class="documents__img"><img src="img/features/docs_3.jpg" alt=""></div>
+          <span class="span-block documents__text">Гарантия на точное соблюдение сроков и ответственность за их&nbsp;невыполнение</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brif_mobail">
+    <div class="container">
+      <div class="interview brif__interview">
+        <h4 class="halfsection-title interview__title">Мы можем озвучить Вам примерную стоимость работы и материалов по телефону</h4>
+        <span class="halfsection-subtitle interview__subtitle span-block">Для этого нужно ответить на 4 вопроса:</span>
+        <ul class="interview-list">
+          <li class="interview-list__item">
+            <span class="interview-list__number">1.</span>
+            <span class="interview-list__text">Какова площадь помещения?</span>
+          </li>
+          <li class="interview-list__item">
+            <span class="interview-list__number">2.</span>
+            <span class="interview-list__text">У Вас новостройка или вторичное жилье?</span>
+          </li>
+          <li class="interview-list__item">
+            <span class="interview-list__number">3.</span>
+            <span class="interview-list__text">Где находится помещение, в&nbsp;котором будет <wbr>производиться ремонт?</span>
+          </li>
+          <li class="interview-list__item">
+            <span class="interview-list__number">4.</span>
+            <span class="interview-list__text">Назначение помещения?</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section brif brif_bg">
+    <div class="container">
+      <div class="brif-block">
+        <div class="interview brif__interview brif_destcop">
+          <h4 class="halfsection-title interview__title">Мы можем озвучить Вам примерную стоимость работы и материалов по телефону</h4>
+          <span class="halfsection-subtitle interview__subtitle span-block">Для этого нужно ответить на 4 вопроса:</span>
+          <ul class="interview-list">
+            <li class="interview-list__item">
+              <span class="interview-list__number">1.</span>
+              <span class="interview-list__text">Какова площадь помещения?</span>
+            </li>
+            <li class="interview-list__item">
+              <span class="interview-list__number">2.</span>
+              <span class="interview-list__text">У Вас новостройка или вторичное жилье?</span>
+            </li>
+            <li class="interview-list__item">
+              <span class="interview-list__number">3.</span>
+              <span class="interview-list__text">Где находится помещение, в котором будет производиться ремонт?</span>
+            </li>
+            <li class="interview-list__item">
+              <span class="interview-list__number">4.</span>
+              <span class="interview-list__text">Назначение помещения?</span>
+            </li>
+          </ul>
+        </div>
+        <!-- /.interview brif__interview -->
+        <div class="form brif__form">
+          <h4 class="halfsection-title form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h4>
+          <span class="halfsection-subtitle form__subtitle span-block">Для этого заполните форму ниже</span>
+          <form action="#" class="form">
+            <input type="text" name="username" id="username" class='input form__input' placeholder="Ваше имя">
+            <input type="tel" name="userphone" id="userphone" class='input form__input phone' placeholder="Ваш телефон">
+            <!-- <input type="email" name="usermail" id="usermail" class='input form__input email' placeholder="Ваш e-mail"> -->
+            <div id="messageBox"></div>
+            <button class="button form__button">Рассчитать стоимость</button>
+          </form>
+          <span class="form__text span-block">Мы перезвоним Вам в течение 60 секунд</span>
+        </div>
+        <!-- /.form brif__form -->
+      </div>
+      <!-- /.brif-block -->
+    </div>
+  </section>
+  <!-- /.section brif -->
+  </main>
+  <footer class="footer">
+    <div class="map" id="map">
+      
+    </div>
+    <div class="container">
+      <div class="contacts-block">
+        <div class="contacts">
+          <h3 class="contacts__title">Приезжайте к нам в гости! Проконсультируем Вас <br>по всем вопросам ремонта</h3>
+          <ul class="contacts-list">
+            <li class="contacts-list__item">
+              <div class="contacts-list__img">
+                <img src="img/footer/placeholder.png" alt="">
+              </div>
+              <span class="span-block contacts-list__text">г. Москва
+              <span class="span-block bold contacts-list__desc">ул. Ленинга, д. 10, корпус 2, оф. 308</span></span>
+            </li>
+            <li class="contacts-list__item">
+              <div class="contacts-list__img">
+                <img src="img/footer/clock.png" alt="">
+              </div>
+              <span class="span-block contacts-list__text">Режим работы:
+              <span class="span-block bold contacts-list__desc">с 9:00 до 18:00</span></span>
+            </li>
+            <li class="contacts-list__item">
+              <div class="contacts-list__img">
+                <img src="img/footer/phone-call.png" alt="">
+              </div>
+              <span class="span-block contacts-list__text">Телефон:    
+              <span class="span-block bold contacts-list__desc">+ 7 (495) 42-251-31</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <!-- ul.contacts-list>li.contacts-list__item*3> -->
+
   <div class="modal" id="modal1">
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="closemodal">&times;</button>
@@ -211,8 +386,8 @@
       <form id="dialog-form" class="dialog-form">
         <h3 class="dialog-form__title">Узнайте точную стоимость ремонта по телефону!</h3>
         <p class="dialog-form__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
-        <input type="text" name="username" id="usernamed" class='input dialog-form__input' placeholder="Ваше имя">
-        <input type="tell" name="userphone" id="userphoned" class='input dialog-form__input' placeholder="Ваш телефон">
+        <input type="text" name="username" id="username" class='input dialog-form__input' placeholder="Ваше имя">
+        <input type="tel" name="userphone" id="userphone" class='input dialog-form__input phone' placeholder="Ваш телефон">
         <button class="button dialog-form__button">Узнать стоимость</button>
         <span class="dialog-form__text">Или Вы можете перезвонить нам сами по&nbsp;телефону:</span>
         <span class="dialog-form__phone">+7 (8182) 42-51-31</span>
@@ -238,8 +413,51 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/modal.js"></script>
-  <script src="js/form.js"></script>
+  <!-- <script src="js/form.js"></script> -->
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      ymaps.ready(init);
+      function init(){ 
+          // Создание карты.    
+          var myMap = new ymaps.Map("map", {
+              // Координаты центра карты.
+              // Порядок по умолчанию: «широта, долгота».
+              // Чтобы не определять координаты центра карты вручную,
+              // воспользуйтесь инструментом Определение координат.
+              center: [55.684074, 37.412524],
+              // Уровень масштабирования. Допустимые значения:
+              // от 0 (весь мир) до 19.
+              zoom: 15
+          },{
+            searchControlProvider: 'yandex#search'
+          });
+          myGeoObject = new ymaps.GeoObject({
+              // Описание геометрии.
+              geometry: {
+                  type: "Point",
+                  coordinates: [55.684074, 37.412524],
+              },
+              // Свойства.
+              properties: {
+                  // Контент метки.
+                  iconContent: 'Ремонт квартир',
+                  hintContent: 'ул. Ленинга, д. 10, корпус 2, оф. 308'
+              }
+          }, {
+              // Опции.
+              // Иконка метки будет растягиваться под размер ее содержимого.
+              preset: 'islands#blackStretchyIcon',
+              // Метку можно перемещать.
+              draggable: false
+          }),
+          myMap.geoObjects.add(myGeoObject);
+          myMap.behaviors.disable('scrollZoom');
+      }
+    });
+  </script>
   <script>
   $(document).ready(function(){
     // Инициализация Wow.js
@@ -269,6 +487,55 @@
     }
   ]
     });
+  });
+  // Валидация формы
+  // $("#commentForm").validate();
+  $('form').each(function() {   
+    $(this).validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 2,
+          maxlength: 15,
+        },
+        usermail: {
+          required: true,
+          email: true,
+        },
+        userphone:{
+          required: true,
+        }
+      },
+      messages: {
+        username: {
+          required: "Заполните Имя",
+          minlength: "Введите Имя длиною больше 2 символов",
+          maxlength: "Введите Имя длиною меньше 15 символов",
+        },
+        usermail: {
+          required: "Заполните E-mail",
+          email: "Введите корректный e-mail"
+        },
+        userphone:{
+          required: "Заполните номер телефона",
+        }
+      },
+      errorClass: "invalid",
+      errorElement: "div",
+      // errorLabelContainer: "#messageBox",
+      
+      highlight: function(element, errorClass, validClass) {
+        $(element).addClass(errorClass).removeClass(validClass);
+      },
+
+      // wrapper: "li",
+      // onsubmit: false
+      
+    });
+  });
+  // Маска для телефона
+  jQuery(function($){
+    $(".phone").mask("+7 (999) 999-99-99");
   });
   // Анимация при скроле
   $(document).ready(function () {

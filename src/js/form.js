@@ -47,8 +47,8 @@ $(document).ready(function(){
       data: $(this).serialize(),
       success: function(data) {
         // Очистка полей формы
-        $('#usernamed').val('');
-        $('#userphoned').val('');
+        $('#username').val('');
+        $('#userphone').val('');
         // Вывод ответа в модальном окне
         $('#sucess-user').html(data);
         $('#sucess-user').addClass('bold');

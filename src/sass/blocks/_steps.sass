@@ -1,0 +1,33 @@
+.steps
+  padding: 32px 0 99px 0
+  &__title
+    max-width: 670px
+    letter-spacing: -1px
+  &__subtitle
+    margin-top: 39px
+  &-block
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: 57px 31px 0 32px
+    &__item
+      max-width: 171px
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:last-child
+        & .steps-block__img::after
+          display: none
+    &__img
+      display: inline-block
+      margin-bottom: 24px
+      position: relative
+      &:after
+        content: url('../img/steps/arrow.png')
+        position: absolute
+        top: -11px
+        right: -103px
+    &__text
+      text-align: center
+      letter-spacing: -0.7px
+    
