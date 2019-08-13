@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+
   <nav class="navbar" id='scroll'>
     <div class="container">
       <div class="navbar-block">
@@ -50,13 +50,13 @@
             <li class="hero-list__item wow bounceInRight" data-wow-delay="0.6s" data-wow-duration="1s">
               <div class="hero-list__img"><img src="img/icon-hero-list2.png" alt=""></div>
               <span class="hero-list__text">Рассчитаем смету на работы и&nbsp;материалы в день обращения</span>
-            </li> 
+            </li>
             <li class="hero-list__item hero-list__item-pp wow bounceInLeft" data-wow-delay="1.1s" data-wow-duration="1s">
               <div class="hero-list__img"><img src="img/icon-hero-list3.png" alt=""></div>
               <span class="hero-list__text">Предложим более 100 вариантов исполнения дизайна Вашего жилья</span>
             </li>
           </ul> <!-- hero-text-list -->
-        </div> 
+        </div>
         <!-- /.hero-text -->
         <div class="hero-img"><img src="img/hero-main-01.jpg" alt=""></div>
         <!-- /.hero-img -->
@@ -65,7 +65,7 @@
     </div>
     <!-- /.container -->
   </section>
-  <!-- /.hero 
+  <!-- /.hero
   -->
 
   <section class="getform">
@@ -91,9 +91,9 @@
 
   <section class="portfolio">
     <div class="container">
-      <h2 class="section-title portfolio__title"> 
+      <h2 class="section-title portfolio__title">
         <span class="span-block">Работая с 2007 года,</span>
-        <span class="span-block">мы сделали более 500 ремонтов в квартирах и домах</span>  </h2>  
+        <span class="span-block">мы сделали более 500 ремонтов в квартирах и домах</span>  </h2>
     </div>
     <div class="container portfolio-contain wow bounceInLeft" data-wow-delay="0.5s">
         <div class="slider">
@@ -109,7 +109,7 @@
         <div class="arrows__left"><img src="img/portfolio/left-arrow.png" alt=""></div>
         <div class="arrows__right"><img src="img/portfolio/right-arrow.png" alt=""></div>
     </div>
-    
+
   </section>
 
   <section class="section price">
@@ -303,7 +303,7 @@
   </main>
   <footer class="footer">
     <div class="map" id="map">
-      
+
     </div>
     <div class="container">
       <div class="contacts-block">
@@ -328,7 +328,7 @@
               <div class="contacts-list__img">
                 <img src="img/footer/phone-call.png" alt="">
               </div>
-              <span class="span-block contacts-list__text">Телефон:    
+              <span class="span-block contacts-list__text">Телефон:
               <span class="span-block bold contacts-list__desc">+ 7 (495) 42-251-31</span></span>
             </li>
           </ul>
@@ -336,8 +336,8 @@
       </div>
     </div>
   </footer>
-  
-  
+
+
   <!-- ul.contacts-list>li.contacts-list__item*3> -->
 
   <div class="modal" id="modal1">
@@ -405,28 +405,26 @@
   </div>
 
 
-  
+
   <button class="button" id="scrollbutton"><i class="fas fa-arrow-circle-up"></i></button>
-  
+
 
   <script src="https://kit.fontawesome.com/185b8e7a1f.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/modal.js"></script>
-  <!-- <script src="js/form.js"></script> -->
+  <script src="js/form.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script>
     $(document).ready(function(){
+      // Карты яндекс API
       ymaps.ready(init);
-      function init(){ 
-          // Создание карты.    
+      function init(){
+          // Создание карты.
           var myMap = new ymaps.Map("map", {
               // Координаты центра карты.
-              // Порядок по умолчанию: «широта, долгота».
-              // Чтобы не определять координаты центра карты вручную,
-              // воспользуйтесь инструментом Определение координат.
               center: [55.684074, 37.412524],
               // Уровень масштабирования. Допустимые значения:
               // от 0 (весь мир) до 19.
@@ -470,7 +468,7 @@
       prevArrow: $('.arrows__left'),
       nextArrow: $('.arrows__right'),
       responsive: [
-        
+
     {
       breakpoint: 1200,
       settings: {
@@ -490,7 +488,7 @@
   });
   // Валидация формы
   // $("#commentForm").validate();
-  $('form').each(function() {   
+  /* $('form').each(function() {
     $(this).validate({
       rules: {
         username: {
@@ -523,21 +521,21 @@
       errorClass: "invalid",
       errorElement: "div",
       // errorLabelContainer: "#messageBox",
-      
+
       highlight: function(element, errorClass, validClass) {
         $(element).addClass(errorClass).removeClass(validClass);
       },
 
       // wrapper: "li",
       // onsubmit: false
-      
+
     });
-  });
+  }); */
   // Маска для телефона
   jQuery(function($){
     $(".phone").mask("+7 (999) 999-99-99");
   });
-  // Анимация при скроле
+  // Анимация при скроле до нужного элемента
   $(document).ready(function () {
     var container = $('.price__title'),
         win = $(window),
@@ -547,7 +545,7 @@
             containerPos = container.offset().top;
         if (scrollPos >= containerPos - windowHeight/1.5) {
             container.addClass('animScale');
-        }    
+        }
     });
   });;
   </script>

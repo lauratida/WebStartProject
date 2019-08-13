@@ -27,17 +27,11 @@ $(document).ready(function(){
     return false;
   });
   $(window).scroll(function() {
- 
-    if($(this).scrollTop() != 0) {
-     
-    $('#scrollbutton').fadeIn();
-     
-    } else {
-     
-    $('#scrollbutton').fadeOut();
-     
-    }
-     
+      if($(this).scrollTop() != 0) {
+        $('#scrollbutton').fadeIn();
+      } else {
+        $('#scrollbutton').fadeOut();
+      }
     });
 
   // Проверка метода по скроллу к нужному месту.
