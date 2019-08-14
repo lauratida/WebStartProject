@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Ремонт квартир</title>
+  
   <script src="https://api-maps.yandex.ru/2.1/?apikey=0b760b5a-a884-4719-93d0-9ef0d583724a&lang=ru_RU" type="text/javascript"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54884206, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54884206" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
 </head>
 <body>
 
@@ -26,7 +26,7 @@
             <span class="navbar__adress">Калуга, Москва, МО</span>
             <a href="tel:+7(495)42-251-31" class="navbar__phone">+7 (495) 42-251-31</a>
           </div>
-          <button class="button navbar__button animScale" id="navbar-button">Перезвоните мне</button>
+          <button class="button navbar__button animScale" onclick="ym(54884206, 'reachGoal', 'callme'); return true;" id="navbar-button">Перезвоните мне</button>
         </div>
         <!-- /.info -->
       </div>
@@ -73,9 +73,9 @@
       <div class="call">
         <h1 class="call__title">Мы бесплатно разработаем <wbr>дизайн-проект Вашего жилья <wbr>и&nbsp;реализуем&nbsp;его!</h1>
         <span class="call__text">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
-        <form action="#" id="call-form" class="form-call">
-          <input type="text" name="username" id="username" placeholder='Ваше имя' class="input form-call__input form-call__name">
-          <input type="tel" name="userphone" id="userphone" placeholder='Ваш телефон' class="input form-call__input form-call__phone phone">
+        <form action="#" id="call-form" class="form-call" >
+          <input type="text" name="username" id="usernamed" placeholder='Ваше имя' class="input form-call__input form-call__name">
+          <input type="tel" name="userphone" id="userphoned" placeholder='Ваш телефон' class="input form-call__input form-call__phone phone">
           <button class="button call__button wow flipInY">Получить бесплатный<wbr> дизайн-проект</button>
         </form>
 
@@ -97,13 +97,13 @@
     </div>
     <div class="container portfolio-contain wow bounceInLeft" data-wow-delay="0.5s">
         <div class="slider">
-            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-1.jpg" alt=""></div>
-            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-2.jpg" alt=""></div>
-            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-3.jpg" alt=""></div>
-            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-1.jpg" alt=""></div>
-            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-2.jpg" alt=""></div>
-            <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-3.jpg" alt=""></div>
-          </div>
+          <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-1.jpg" alt=""></div>
+          <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-2.jpg" alt=""></div>
+          <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-3.jpg" alt=""></div>
+          <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-1.jpg" alt=""></div>
+          <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-2.jpg" alt=""></div>
+          <div class="slider__item"><img class="slider__img" src="img/portfolio/portfolio-3.jpg" alt=""></div>
+        </div>
     </div>
     <div class="arrows">
         <div class="arrows__left"><img src="img/portfolio/left-arrow.png" alt=""></div>
@@ -124,42 +124,42 @@
           <div class="card__img"><img src="img/price/card-img-1.jpg" alt=""></div>
           <div class="card__text">
             <h4 class="card__title">Ремонт ванных комнат и с/у</h4>
-            <a href="#" class="card__link">Узнать цены</a>
+            <a href="#" data-target="bath" class="card__link">Узнать цены</a>
           </div>
         </div>
         <div class="card card_space wow fadeInUp" data-wow-delay="0.1s">
           <div class="card__img"><img src="img/price/card-img-2.jpg" alt=""></div>
           <div class="card__text">
             <h4 class="card__title">Ремонт комнат и квартир</h4>
-            <a href="#" class="card__link">Узнать цены</a>
+            <a href="#" data-target="living" class="card__link">Узнать цены</a>
           </div>
         </div>
         <div class="card card_space wow fadeInUp" data-wow-delay="0.2s">
           <div class="card__img"><img src="img/price/card-img-3.jpg" alt=""></div>
           <div class="card__text">
             <h4 class="card__title">Отделка офисных помещений</h4>
-            <a href="#" class="card__link">Узнать цены</a>
+            <a href="#" data-target="office" class="card__link">Узнать цены</a>
           </div>
         </div>
         <div class="card card_space wow fadeInUp" data-wow-delay="0.3s">
           <div class="card__img"><img src="img/price/card-img-4.jpg" alt=""></div>
           <div class="card__text">
             <h4 class="card__title">Ремонт в новостройках</h4>
-            <a href="#" class="card__link">Узнать цены</a>
+            <a href="#" data-target="new" class="card__link">Узнать цены</a>
           </div>
         </div>
         <div class="card card_space wow fadeInUp" data-wow-delay="0.4s">
           <div class="card__img"><img src="img/price/card-img-5.jpg" alt=""></div>
           <div class="card__text">
             <h4 class="card__title">Ремонт кухонь</h4>
-            <a href="#" class="card__link">Узнать цены</a>
+            <a href="#" data-target="kitchen" class="card__link">Узнать цены</a>
           </div>
         </div>
         <div class="card card_space wow fadeInUp" data-wow-delay="0.5s">
           <div class="card__img"><img src="img/price/card-img-6.jpg" alt=""></div>
           <div class="card__text">
             <h4 class="card__title">Ремонт дач и коттеджей</h4>
-            <a href="#" class="card__link">Узнать цены</a>
+            <a href="#" data-target="cottage" class="card__link">Узнать цены</a>
           </div>
         </div>
       </div>
@@ -208,7 +208,7 @@
           <span class="discount__text">Мы дадим Вам максимальные скидки у&nbsp;наших партнеров для закупки материалов оптом</span>
         </div>
         <div class="discount__card">
-          <img src="img/features/third_step.png" alt="">
+          <img src="img/features/third_step.jpg" alt="">
           <span class="discount__text">Все, что не сможете найти в городе - поможем заказать у проверенных поставщиков</span>
         </div>
       </div>
@@ -286,9 +286,9 @@
           <h4 class="halfsection-title form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h4>
           <span class="halfsection-subtitle form__subtitle span-block">Для этого заполните форму ниже</span>
           <form action="#" class="form">
-            <input type="text" name="username" id="username" class='input form__input' placeholder="Ваше имя">
-            <input type="tel" name="userphone" id="userphone" class='input form__input phone' placeholder="Ваш телефон">
-            <!-- <input type="email" name="usermail" id="usermail" class='input form__input email' placeholder="Ваш e-mail"> -->
+            <input type="text" name="username" id="usernameb" class='input form__input' placeholder="Ваше имя">
+            <input type="tel" name="userphone" id="userphoneb" class='input form__input phone' placeholder="Ваш телефон">
+            <input type="email" name="usermail" id="usermailb" class='input form__input email' placeholder="Ваш e-mail">
             <div id="messageBox"></div>
             <button class="button form__button">Рассчитать стоимость</button>
           </form>
@@ -301,6 +301,8 @@
   </section>
   <!-- /.section brif -->
   </main>
+
+
   <footer class="footer">
     <div class="map" id="map">
 
@@ -343,51 +345,15 @@
   <div class="modal" id="modal1">
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="closemodal">&times;</button>
-      <!-- <div class="dialog-desc">
-
-        <div class="dialog-desc-card dialog-desc-card_top">
-          <div class="dialog-desc__img"><img src="img/modal/modal1-1.jpg" alt=""></div>
-          <div class="dialog-desc-card-wrap">
-          <h4 class="dialog-desc-card__title">Ванная комната</h4>
-            <span class="dialog-desc-card__text">135*150 - <strong>31 000 руб.</strong></span>
-            <span class="dialog-desc-card__text">170*170 - <strong>43 000 руб.</strong></span>
-          </div>
-        </div>
-
-        <div class="dialog-desc-card">
-          <div class="dialog-desc__img"><img src="img/modal/modal1-2.jpg" alt=""></div>
-          <div class="dialog-desc-card-wrap">
-            <span class="dialog-desc-card__title">Туалет</span>
-            <span class="dialog-desc-card__text">135*70 - <strong>14 000 руб.</strong></span>
-          </div>
-        </div>
-
-        <div class="dialog-desc-card">
-          <div class="dialog-desc__img"><img src="img/modal/modal1-3.jpg" alt=""></div>
-          <div class="dialog-desc-card-wrap">
-            <span class="dialog-desc-card__title">Совмещенный санузел</span>
-            <span class="dialog-desc-card__text">170*210 - <strong>54 000 руб.</strong></span>
-          </div>
-        </div>
-
-        <div class="dialog-desc-text">
-          <h3 class="dialog-desc-text__title">В стоимость работ входит</h3>
-          <ul class="dialog-desc-text__list">
-            <li class="dialog-desc-text__item">Демонтаж старого покрытия стен и пола</li>
-            <li class="dialog-desc-text__item">Выравнивание стен гипсовыми составами</li>
-            <li class="dialog-desc-text__item">Грунтовка стен и пола антисептиком, бетоноконтактом</li>
-            <li class="dialog-desc-text__item">Монтаж кафельной плитки на полу и стенах</li>
-            <li class="dialog-desc-text__item">Установка реечного или натяжного потолка, светильников</li>
-            <li class="dialog-desc-text__item">Монтаж двери с коробкой</li>
-          </ul>
-        </div>
-      </div> -->
+      <div class="dialog-desc">
+        
+      </div> 
       <!-- /.dialog-desc -->
       <form id="dialog-form" class="dialog-form">
         <h3 class="dialog-form__title">Узнайте точную стоимость ремонта по телефону!</h3>
         <p class="dialog-form__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
-        <input type="text" name="username" id="username" class='input dialog-form__input' placeholder="Ваше имя">
-        <input type="tel" name="userphone" id="userphone" class='input dialog-form__input phone' placeholder="Ваш телефон">
+        <input type="text" name="username" id="usernamem" class='input dialog-form__input' placeholder="Ваше имя">
+        <input type="tel" name="userphone" id="userphonem" class='input dialog-form__input phone' placeholder="Ваш телефон">
         <button class="button dialog-form__button">Узнать стоимость</button>
         <span class="dialog-form__text">Или Вы можете перезвонить нам сами по&nbsp;телефону:</span>
         <span class="dialog-form__phone">+7 (8182) 42-51-31</span>
@@ -412,11 +378,12 @@
   <script src="https://kit.fontawesome.com/185b8e7a1f.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/form.js"></script>
+  
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
   <script>
     $(document).ready(function(){
       // Карты яндекс API
@@ -486,51 +453,6 @@
   ]
     });
   });
-  // Валидация формы
-  // $("#commentForm").validate();
-  /* $('form').each(function() {
-    $(this).validate({
-      rules: {
-        username: {
-          required: true,
-          minlength: 2,
-          maxlength: 15,
-        },
-        usermail: {
-          required: true,
-          email: true,
-        },
-        userphone:{
-          required: true,
-        }
-      },
-      messages: {
-        username: {
-          required: "Заполните Имя",
-          minlength: "Введите Имя длиною больше 2 символов",
-          maxlength: "Введите Имя длиною меньше 15 символов",
-        },
-        usermail: {
-          required: "Заполните E-mail",
-          email: "Введите корректный e-mail"
-        },
-        userphone:{
-          required: "Заполните номер телефона",
-        }
-      },
-      errorClass: "invalid",
-      errorElement: "div",
-      // errorLabelContainer: "#messageBox",
-
-      highlight: function(element, errorClass, validClass) {
-        $(element).addClass(errorClass).removeClass(validClass);
-      },
-
-      // wrapper: "li",
-      // onsubmit: false
-
-    });
-  }); */
   // Маска для телефона
   jQuery(function($){
     $(".phone").mask("+7 (999) 999-99-99");

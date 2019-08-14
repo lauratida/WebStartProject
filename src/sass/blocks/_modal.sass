@@ -6,11 +6,11 @@
   height: 100%
   background-color: rgba(#000, 0.5)
   display: none
-  &_active
-    display: flex
+  // &_active
+  //   display: flex
   &-dialog
     margin: auto
-    // width: 1170px
+    max-width: 1170px
     // height: 674px
     // min-width: 400px
     background-color: $white
@@ -23,15 +23,18 @@
       width: 50px
       height: 50px
       border: none
+      background: $white
 .dialog
   &-desc
     flex-basis: 51.3%
     display: flex
+    min-width: 600px
     // justify-content: space-between
     flex-direction: column
     background-color: $modal-bg
-    padding: 80px 97px 75px 78px
+    padding: 80px 97px 61px 78px
     color: $color-black
+    display: none
     &__img
       width: 120px
       height: 85px
@@ -89,8 +92,9 @@
   &-form
     display: flex
     flex-direction: column
-    padding: 74px 100px 76px 99px
+    padding: 74px 100px 73px 99px
     text-align: center
+    min-width: 570px
     // flex-basis: 48.7%
     & input:last-of-type
       margin-bottom: 26px
@@ -135,5 +139,26 @@
   text-align: center
   padding: 74px 150px
   line-height: 1.8
+  z-index: 99999
 
+.wrap-slider
+  position: relative
+.modal_active
+  display: flex
+.modal_arrows__left
+  position: absolute
+  top: 129px
+  left: 0
+  z-index: 999
+.modal_arrows__right
+  position: absolute
+  top: 129px
+  right: -14px
+  z-index: 999
 
+.slider_modal
+  width: 440px
+.room-desc
+  margin-top: 50px
+  max-width: 430px
+  font-size: 20px

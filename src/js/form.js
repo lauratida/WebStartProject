@@ -19,8 +19,8 @@ $(document).ready(function(){
       messages: {
         username: {
           required: "Заполните Имя",
-          minlength: "Введите Имя длиною больше 2 символов",
-          maxlength: "Введите Имя длиною меньше 15 символов",
+          minlength: "Введите больше 2 символов",
+          maxlength: "Введите меньше 15 символов",
         },
         usermail: {
           required: "Заполните E-mail",
@@ -39,10 +39,18 @@ $(document).ready(function(){
             type: 'post',
             data: $(form).serialize(),
             success: function(data) {
+              yaCounter54884206.reachGoal('FormSubmit');
               // Очистка полей формы
+              $('#usernamed').val('');
+              $('#userphoned').val(''); 
+                
+              $('#usernamem').val('');
+              $('#userphonem').val('');
 
-              $('#username').val('');
-              $('#userphone').val('');
+              $('#usernameb').val('');
+              $('#userphoneb').val('');
+              $('#usermailb').val('');
+
               // Вывод ответа в модальном окне
               $('#sucess-user').html(data);
               $('#sucess-user').addClass('bold');

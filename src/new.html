@@ -1,0 +1,26 @@
+<div class="wrap-slider">
+    <div class="modal_arrows__left"><img src="img/modal/office/office-arrow-left.png" alt=""></div>
+    <div class="slider_modal">
+      <div class="slider_modal__item"><img class="slider__img" src="img/modal/new/new1.jpg" alt=""></div>
+      <div class="slider_modal__item"><img class="slider__img" src="img/modal/new/new1.jpg" alt=""></div>
+      <div class="slider_modal__item"><img class="slider__img" src="img/modal/new/new1.jpg" alt=""></div>
+      <div class="slider_modal__item"><img class="slider__img" src="img/modal/new/new1.jpg" alt=""></div>
+      <div class="slider_modal__item"><img class="slider__img" src="img/modal/new/new1.jpg" alt=""></div>
+      <div class="slider_modal__item"><img class="slider__img" src="img/modal/new/new1.jpg" alt=""></div>
+    </div>
+    <div class="modal_arrows__right"><img src="img/modal/office/office-arrow-right.png" alt=""></div>
+  </div>
+  <p class="room-desc">
+      Цена ремонта в новостройке будет зависеть от площади, использованных материалов и видов проделанных работ.
+  </p>
+
+
+<script>
+$('.slider_modal').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.modal_arrows__left'),
+    nextArrow: $('.modal_arrows__right'),
+  });
+</script>

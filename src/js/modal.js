@@ -5,11 +5,24 @@ $(document).ready(function(){
   var close = $('#closemodal');
 
   button.on('click', function(){
+    // $("div.content").remove()
     modal.addClass('modal_active');
   });
   close.on('click', function(){
     modal.removeClass('modal_active');
+    $('.dialog-desc').removeClass('modal_active');
   });
+
+  // закрыть по клику вне окна
+  $(document).mouseup(function(e) {
+    var popup = $('.modal-dialog');
+    if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+      modal.removeClass('modal_active');
+    }
+  });
+  
+
+
   // modal.on('click', function(){
   //   modal.removeClass('modal_active');
   // });
@@ -39,4 +52,16 @@ $(document).ready(function(){
   //   $("html, body").animate({ scrollTop: $('#hero').offset().top }, 600);
   //   return false;
   // });
+
+  // Подгрузка модальных окон при клике на ссылку
+  var cardlink = $('.card__link')
+  
+  cardlink.on('click', function(event){
+    event.preventDefault();
+    modal.addClass('modal_active');
+    var target = $(this).attr('data-target')
+    $('.dialog-desc').addClass('modal_active')
+    $('.dialog-desc').load(target+".html")
+  });
+
 });
