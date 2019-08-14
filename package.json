@@ -1,0 +1,30 @@
+{
+  "name": "WebStartProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauratida/WebStartProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauratida/WebStartProject/issues"
+  },
+  "homepage": "https://github.com/lauratida/WebStartProject#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-tinypng-compress": "^1.2.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0"
+  }
+}

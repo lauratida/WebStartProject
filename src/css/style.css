@@ -753,6 +753,7 @@ template {
 
 @font-face {
   font-family: 'Museo Sans Cyrl 300';
+  font-display: auto;
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
   src: local("../fonts/MuseoSansCyrl/MuseoSansCyrl-300"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff");
   font-weight: 300;
@@ -761,6 +762,7 @@ template {
 
 @font-face {
   font-family: 'Museo Sans Cyrl 700';
+  font-display: auto;
   src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
   src: local("../fonts/MuseoSansCyrl/MuseoSansCyrl-700"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff");
   font-weight: normal;
@@ -1899,6 +1901,23 @@ a {
 
 .navigation {
   text-align: right;
+}
+
+input.invalid {
+  border: 1px solid #c71585;
+}
+
+div.invalid {
+  border: none;
+  color: #c71585;
+}
+
+#usernamed-error {
+  font-size: 14px;
+}
+
+#userphoned-error {
+  font-size: 14px;
 }
 
 @media (max-width: 1200px) {
