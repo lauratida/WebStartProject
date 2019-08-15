@@ -1,7 +1,7 @@
 var button = document.querySelector('#navbar-button');
 var modal = document.querySelector('#modal1');
 var close = document.querySelector('#closemodal');
-let timerId = setTimeout(() => {modal.classList.remove('modal_active');}, 1000);
+var timerId = setTimeout(() => {modal.classList.remove('modal_active');}, 1000);
 
 button.addEventListener('click', function(){
   modal.classList.add('modal_active');

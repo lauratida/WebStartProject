@@ -6,6 +6,49 @@
   position: absolute
   top: 0
   left: 0
+  overflow: hidden
+  cursor: pointer
+  background: url('../img/footer/maploader.jpg') #ffffff no-repeat
+  background-position: center center
+  background-size: cover
+  // box-shadow: 0 0 2em  0 rgba(0,0,0,.2)
+.map-wrap
+  position: relative
+  z-index: 7
+  width: 100%
+  height: 100%
+  cursor: pointer
+  background-color: transparent
+.loader 
+  position: absolute
+  z-index: 15
+  top: -100%
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+  background-color: rgba(0,0,0,.55)
+.loader:after, .loader:before 
+  box-sizing: border-box
+.loader.is-active
+  top: 0
+  opacity: 1
+.loader-default:after
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  width: 48px
+  height: 48px
+  content: ''
+  animation: rotation 1s linear infinite
+  border: solid 8px #ffffff
+  border-left-color: transparent
+  border-radius: 50%
+
 .contacts
   flex-basis: 50%
   padding: 69px 0 0 214px

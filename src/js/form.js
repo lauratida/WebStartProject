@@ -1,6 +1,10 @@
-
-$(document).ready(function(){
-  $('form').each(function() {
+$(document).ready(function () {
+  // Маска для телефона
+  jQuery(function ($) {
+    $(".phone").mask("+7 (999) 999-99-99");
+  });
+  // Валидация формы и запуск ajax отрпавки при успешной обработке
+  $('form').each(function () {
     $(this).validate({
       rules: {
         username: {
@@ -12,7 +16,7 @@ $(document).ready(function(){
           required: true,
           email: true,
         },
-        userphone:{
+        userphone: {
           required: true,
         }
       },
@@ -26,51 +30,51 @@ $(document).ready(function(){
           required: "Заполните E-mail",
           email: "Введите корректный e-mail"
         },
-        userphone:{
+        userphone: {
           required: "Заполните номер телефона",
         }
       },
       errorClass: "invalid",
       errorElement: "div",
-      submitHandler: function(form) {
-          event.preventDefault();
-          $.ajax({
-            url: './mail.php',
-            type: 'post',
-            data: $(form).serialize(),
-            success: function(data) {
-              yaCounter54884206.reachGoal('FormSubmit');
-              // Очистка полей формы
-              $('#usernamed').val('');
-              $('#userphoned').val(''); 
-                
-              $('#usernamem').val('');
-              $('#userphonem').val('');
+      submitHandler: function (form) {
+        event.preventDefault();
+        $.ajax({
+          url: './mail.php',
+          type: 'post',
+          data: $(form).serialize(),
+          success: function (data) {
+            yaCounter54884206.reachGoal('FormSubmit');
+            // Очистка полей формы
+            $('#usernamed').val('');
+            $('#userphoned').val('');
 
-              $('#usernameb').val('');
-              $('#userphoneb').val('');
-              $('#usermailb').val('');
+            $('#usernamem').val('');
+            $('#userphonem').val('');
 
-              // Вывод ответа в модальном окне
-              $('#sucess-user').html(data);
-              $('#sucess-user').addClass('bold');
-              $('#modal-succes').addClass('modal_active');
-              // Автозакрытие
-              var timerId;
-              timerId = setTimeout(function() {
-                $('#modal-succes').removeClass('modal_active');
-              }, 5000);
-              // Закрытие на кнопку-крестик
-              $('#closesuccessmodal').on('click', function(){
-                clearTimeout(timerId);
-                $('#modal-succes').removeClass('modal_active');
-              });
+            $('#usernameb').val('');
+            $('#userphoneb').val('');
+            $('#usermailb').val('');
 
-            },
-            error: function(jqXHR, textStatus) {
-              console.log(jqXHR + ': ' + textStatus);
-            },
-          });
+            // Вывод ответа в модальном окне
+            $('#sucess-user').html(data);
+            $('#sucess-user').addClass('bold');
+            $('#modal-succes').addClass('modal_active');
+            // Автозакрытие
+            var timerId;
+            timerId = setTimeout(function () {
+              $('#modal-succes').removeClass('modal_active');
+            }, 5000);
+            // Закрытие на кнопку-крестик
+            $('#closesuccessmodal').on('click', function () {
+              clearTimeout(timerId);
+              $('#modal-succes').removeClass('modal_active');
+            });
+
+          },
+          error: function (jqXHR, textStatus) {
+            console.log(jqXHR + ': ' + textStatus);
+          },
+        });
 
 
       }

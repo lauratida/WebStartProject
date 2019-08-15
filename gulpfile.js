@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+const { series, parallel } = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var uglifyjs = require('uglify-js'); 
@@ -20,10 +21,11 @@ gulp.task('minify-css', function(cb) {
   cb();
 })
 
-gulp.task('minifyHtml', () => {
+gulp.task('minifyHtml', (cb) => {
   return gulp.src('src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist/'));
+  cb();
 });
 
  
@@ -34,12 +36,14 @@ gulp.task('minifyJs', function (cb) {
       gulp.src(['src/js/*.js', '!src/js/*min.js']),
       minify(options),
       rename({suffix: '.min'}),
-      gulp.dest('dist/js')
+      gulp.dest('dist/js'),
+      
     ],
     cb
   );
   gulp.src('src/js/*min.js')
   .pipe(gulp.dest('dist/js/'))
+  cb();
 });
 
 gulp.task('fonts', function(cb) {
@@ -58,7 +62,14 @@ gulp.task('tinypng', function (cb) {
 });
 
 gulp.task('movephp', function(cb) {
-  return gulp.src('src/*.php')
+  return gulp.src(['src/**/*.php', 'src/**/*.md', 'src/**/*.dist'])
   .pipe(gulp.dest('dist/'))
+  
   cb();
 });
+
+// exports.build = series(gulp, minify-css, minifyHtml, minifyJs, fonts, tinypng, movephp);
+
+gulp.task('default', gulp.parallel('minify-css', 'minifyHtml', 'minifyJs', 'fonts', 'tinypng', 'movephp', function(cb) {
+  cb();
+}))

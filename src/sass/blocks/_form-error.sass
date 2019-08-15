@@ -3,18 +3,79 @@ input.invalid
 div.invalid
   border: none
   color: $error
+  font-size: 14px
+
 #usernamed-error
-  // position: absolute
-  // top: 65px
-  // left: 127px
-  font-size: 14px
+  position: absolute
+  top: 65px
+  left: 6px
 #userphoned-error
-  // position: absolute
-  // left: 304px
-  // top: 65px
-  font-size: 14px
-// @media (max-width: 1200px)
-// @media (max-width: 992px)
+  position: absolute
+  top: 65px
+  left: 263px
+#usernamem-error
+  position: absolute
+  top: 318px
+  left: 107px
+#userphonem
+  margin-bottom: 28px
+#usernameb-error
+  position: absolute
+  top: 65px
+  left: 6px
+#userphoneb-error
+  position: absolute
+  top: 145px
+  left: 6px
+#usermailb-error
+  position: absolute
+  top: 226px
+  left: 6px
+
+
+@media (max-width: 1200px)
+  #usernamem-error
+    top: 299px
+    left: 48px
+  #userphonem-error
+    top: 379px
+    left: 48px
+  #userphoned-error
+    left: 212px
+  
+@media (max-width: 992px)
+  #userphoned-error
+    top: 146px
+    left: 6px
 // @media (max-width: 768px)
-// @media (max-width: 567px)
-// @media (max-width: 420px)
+@media (max-width: 567px)
+  #usernamem-error
+    top: 195px
+    left: 57px
+  #userphonem-error
+    top: 256px
+    left: 57px
+@media (max-width: 420px)
+  #usernamem-error
+    top: 211px
+    left: 47px
+  #userphonem-error 
+    top: 272px
+    left: 47px
+  #usernamed-error
+    top: 62px
+  #userphoned-error
+    top: 140px
+  #usernameb-error, #userphoneb-error, #usermailb-error, #usernamed-error, #userphoned-error
+    font-size: 10px
+  #usernameb-error
+    top: 64px
+    left: 0px
+  #userphoneb-error
+    top: 138px
+    left: 0px
+  #usermailb-error
+    top: 211px
+    left: 0px
+  #userphoned-error
+    top: 136px

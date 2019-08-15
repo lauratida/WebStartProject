@@ -1,0 +1,14 @@
+#usernamed-error {
++ font-size: 10px;
+}
+Элемент
+#userphoned-error {
++ font-size: 10px;
+}
+style.css
+@media (max-width: 420px) {
+#userphoned-error {
+- top: 140px;
++ top: 136px;
+}
+}

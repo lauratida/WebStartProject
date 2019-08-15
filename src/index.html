@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ремонт квартир</title>
   
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=0b760b5a-a884-4719-93d0-9ef0d583724a&lang=ru_RU"></script>
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=0b760b5a-a884-4719-93d0-9ef0d583724a&lang=ru_RU"></script> -->
   <link rel="stylesheet" href="css/style.css">
   
 
@@ -83,7 +83,7 @@
 
         <div class="call-desc">
           <span class="call-desc__text call-desc__text1">Наш менеджер перезвонит Вам <wbr>в&nbsp;течение 60 секунд</span>
-          <span class="call-desc__text call-desc__text2">или перезвоните нам сами <strong>+7 (495) 42-251-31</strong></span>
+          <a href="tel:+7(495)42-251-31" class="call-desc__text call-desc__text2">или перезвоните нам сами <strong>+7 (495) 42-251-31</strong></a>
         </div>
       </div>
     </div>
@@ -198,7 +198,7 @@
   </section>
 
   <section class="features">
-    <div class="features-titlerow"><div class="container"><h3 class="features__title"><span class="span-block mobail_inline">Ремонт обойдется Вам дешевле, так как</span> <span class="span-block mobail_inline">мы используем качественные материалы по оптовым ценам</span></h3></div></div>
+    <div class="features-titlerow"><div class="container"><div class="features-titlerow_wrap"><h3 class="features__title"><span class="span-block mobail_inline">Ремонт обойдется Вам дешевле, так как</span> <span class="span-block mobail_inline">мы используем качественные материалы по оптовым ценам</span></h3></div></div></div>
     <div class="container">
       <div class="discount">
         <div class="discount__card">
@@ -306,8 +306,11 @@
 
 
   <footer class="footer">
-    <div class="map" id="map">
+    <div class="map">
+      <div class="loader loader-default"></div>
+      <div class="map-wrap" id="map">
 
+      </div>
     </div>
     <div class="container">
       <div class="contacts-block">
@@ -333,7 +336,7 @@
                 <img src="img/footer/phone-call.png" alt="">
               </div>
               <span class="span-block contacts-list__text">Телефон:
-              <span class="span-block bold contacts-list__desc">+ 7 (495) 42-251-31</span></span>
+              <a href="tel:+7(495)42-251-31" class="span-block bold contacts-list__desc">+ 7 (495) 42-251-31</a></span>
             </li>
           </ul>
         </div>
@@ -356,9 +359,9 @@
         <p class="dialog-form__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
         <input type="text" name="username" id="usernamem" class='input dialog-form__input' placeholder="Ваше имя">
         <input type="tel" name="userphone" id="userphonem" class='input dialog-form__input phone' placeholder="Ваш телефон">
-        <button class="button dialog-form__button">Узнать стоимость</button>
+        <input type="submit" name="formname" class="button dialog-form__button" value="Узнать стоимость">
         <span class="dialog-form__text">Или Вы можете перезвонить нам сами по&nbsp;телефону:</span>
-        <span class="dialog-form__phone">+7 (8182) 42-51-31</span>
+        <a href="tel:+7(495)42-251-31" class="dialog-form__phone">+7 (8182) 42-51-31</a>
       </form>
       <!-- /.dialog-form -->
     </div>
@@ -374,108 +377,16 @@
 
 
 
-  <button class="button" id="scrollbutton">Наверх</button>
+  <button class="button" id="scrollbutton">&uarr;</button>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/slick.min.js"></script>
-  
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/form.js"></script>
-  <script>
-    $(document).ready(function(){
-      // Карты яндекс API
-      // ymaps.ready(init);
-      // function init(){
-      //     // Создание карты.
-      //     var myMap = new ymaps.Map("map", {
-      //         // Координаты центра карты.
-      //         center: [55.684074, 37.412524],
-      //         // Уровень масштабирования. Допустимые значения:
-      //         // от 0 (весь мир) до 19.
-      //         zoom: 15
-      //     },{
-      //       searchControlProvider: 'yandex#search'
-      //     });
-      //     myGeoObject = new ymaps.GeoObject({
-      //         // Описание геометрии.
-      //         geometry: {
-      //             type: "Point",
-      //             coordinates: [55.684074, 37.412524],
-      //         },
-      //         // Свойства.
-      //         properties: {
-      //             // Контент метки.
-      //             iconContent: 'Ремонт квартир',
-      //             hintContent: 'ул. Ленинга, д. 10, корпус 2, оф. 308'
-      //         }
-      //     }, {
-      //         // Опции.
-      //         // Иконка метки будет растягиваться под размер ее содержимого.
-      //         preset: 'islands#blackStretchyIcon',
-      //         // Метку можно перемещать.
-      //         draggable: false
-      //     }),
-      //     myMap.geoObjects.add(myGeoObject);
-      //     myMap.behaviors.disable('scrollZoom');
-      // }
-    
-  
-    // Инициализация Wow.js
-    new WOW().init();
-    // Слайдер
-    $('.slider').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      prevArrow: $('.arrows__left'),
-      nextArrow: $('.arrows__right'),
-      responsive: [
-
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
-    });
-  });
-  // Маска для телефона
-  jQuery(function($){
-    $(".phone").mask("+7 (999) 999-99-99");
-  });
-
-  
-  // Анимация при скроле до нужного элемента
-  $(document).ready(function () {
-    var container = $('.price__title'),
-        win = $(window),
-        windowHeight = win.height(),
-        maptrigger = $('.features-subtitlerow');
-    win.scroll(function () {
-        var scrollPos = $(this).scrollTop(),
-            containerPos = container.offset().top,
-            maptriggerPos = maptrigger.offset().top;;
-        if (scrollPos >= containerPos - windowHeight/1.5) {
-            container.addClass('animScale');
-        }
-        
-        
-    });
-    
-
-  });;
-  </script>
+  <script src="js/modal.min.js"></script>
+  <script src="js/form.min.js"></script>
+  <script src="js/map.min.js"></script>
+  <script src="js/beautify.min.js"></script>
 </body>
 </html>

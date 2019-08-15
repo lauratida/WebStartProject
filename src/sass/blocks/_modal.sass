@@ -24,6 +24,8 @@
       height: 50px
       border: none
       background: $white
+      cursor: pointer
+      z-index: 100
 .dialog
   &-desc
     flex-basis: 51.3%
@@ -90,6 +92,7 @@
           top: 0
 
   &-form
+    position: relative
     display: flex
     flex-direction: column
     padding: 74px 100px 73px 99px
@@ -119,6 +122,7 @@
     &__text
       font-size: 15px
       line-height: 20px
+      margin: auto
       margin-bottom: 10px
       max-width: 300px
     &__phone
