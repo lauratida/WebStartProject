@@ -23,7 +23,7 @@
     padding: 20px 0 20px 23px
   .call-desc
     flex-wrap: wrap
-    & span:last-child
+    a
       flex-basis: 100%
       margin-top: 0
       strong
@@ -50,6 +50,11 @@
 @media (max-width: 992px)
   .container
     max-width: 760px  
+  .button:hover
+    background-color: $main-color
+    cursor: default
+  a
+    cursor: default
   .dialog-desc
     display: none
   .hero-block
@@ -60,7 +65,16 @@
     input
       // margin-bottom: 10px
       flex-basis: 100%
-  
+  .card
+    &:hover
+      border: 1px solid $border-card
+      box-shadow: none
+      &:after
+        display: none
+    &__link
+      &:hover
+        &:after
+          height: 3px
   .halfsection
     &-title
       font-size: 18px
@@ -98,6 +112,8 @@
     padding: 60px 0 60px 0
     &__card
       margin-bottom: 30px
+  .map
+    cursor: default
 
 @media (max-width: 768px)
   .container
@@ -152,6 +168,12 @@
     flex-basis: 100%
     &__title
       max-width: 300px
+  .modal-success
+    width: 270px
+    height: 200px
+    padding: 45px 30px
+    line-height: 1.8
+    z-index: 99999
 
 @media (max-width: 567px)
   .container
@@ -162,17 +184,19 @@
       border-radius: 5px
   .hero
     &-block
-      padding-top: 40px
+      padding-top: 29px
     &-text
       &__title
         font-size: 22px
         line-height: 27px
-        margin-bottom: 8px
+        margin-bottom: 9px
         margin-left: 5px
+        letter-spacing: 0.1px
       &__subtitle
         font-size: 16px
         line-height: 20px
         margin-left: 6px
+        letter-spacing: -0.2px
     &-list
       margin-top: 4px
       &__img
@@ -188,8 +212,8 @@
         margin-top: 21px
         margin-left: 2px
     &-img
-      margin-top: 20px
-      margin-bottom: 14px
+      margin-top: 39px
+      max-width: 271px
   .dialog-form
     padding: 34px 50px 34px 49px
     max-width: 410px
@@ -225,45 +249,19 @@
       font-size: 18px
     &__subtitle
       font-size: 18px
+  .section-title
+    font-size: 24px
 
 @media (max-width: 420px)
   .container
     max-width: 277px
   
   .navbar
+    &-block
+      padding: 17px 0
     &__button
       padding: 14px 26px
       border-radius: 5px
-  // .hero
-  //   &-block
-  //     padding-top: 40px
-  //   &-text
-  //     &__title
-  //       font-size: 22px
-  //       line-height: 27px
-  //       margin-bottom: 8px
-  //       margin-left: 5px
-  //     &__subtitle
-  //       font-size: 16px
-  //       line-height: 20px
-  //       margin-left: 6px
-  //   &-list
-  //     margin-top: 4px
-  //     &__img
-  //       width: 40px
-  //       height: 40px
-  //     &__text
-  //       font-size: 12px
-  //       line-height: 16px
-  //       margin-left: 15px
-  //       max-width: 210px
-  //       margin-top: 3px
-  //     &__item
-  //       margin-top: 21px
-  //       margin-left: 2px
-  //   &-img
-  //     margin-top: 20px
-  //     margin-bottom: 14px
   .call
     padding: 49px 0px 51px 0
     &__title
@@ -281,7 +279,7 @@
       margin-right: 1px
       letter-spacing: -0.2px
     &-desc
-      & span:last-child 
+      a
         margin-top: 7px
         & strong
           display: inline-block
@@ -303,12 +301,10 @@
       font-size: 18px
 
   .portfolio
-    padding: 42px 0 60px 0
+    padding: 38px 0 60px 0
     &__title
-      font-size: 18px
-      line-height: 21.6px
       margin-bottom: 40px
-      letter-spacing: -1px
+      letter-spacing: -0.5px
   .slider__img
       width: 246px
   .arrows
@@ -321,18 +317,22 @@
     &__title
       margin-bottom: 8px
       max-width: 220px
+      letter-spacing: -1px
     &__subtitle
       margin-bottom: 18px
+      letter-spacing: -0.1px
+      margin-left: -16px
   .card
     max-width: 272px
     &__text
       padding: 11px 0 34px 0
     &__title
       margin: 0px 0 -3px 4px
-      letter-spacing: -0.9px
+      letter-spacing: 0.05px
+      margin-left: -1px
       font-size: 14px
     &__link
-      letter-spacing: -0.9px
+      letter-spacing: -0.1px
       &:after
         width: 99%
         left: 1px
@@ -343,33 +343,35 @@
     &-title
       font-size: 18px
       line-height: 22px
-      letter-spacing: -1px
     &-subtitle
       font-size: 14px
-      letter-spacing: 0.82px
   .halfsection
     &-title
       line-height: 21.35px
       margin-top: 42px
-      max-width: 230px
+      max-width: 240px
   .interview
     padding: 0
     &__title
-      margin-bottom: 11px
+      margin-bottom: 13px
+      margin-left: 1px
     &__subtitle
       max-width: 190px
-      line-height: 19px
+      line-height: 18px
+      margin-left: 4px
     &-list
       font-size: 12px
       &__text
         flex-basis: 232px
         margin-left: 8px
+        letter-spacing: 1px
       &__item
         margin-bottom: 26px
   .steps
     padding: 1px 0 47px 0
     &__subtitle
-      margin-top: 9px
+      margin-top: 10px
+      margin-left: 3px
     &-block
       justify-content: center
       padding: 20px 31px 0 32px
@@ -391,13 +393,16 @@
         margin-bottom: 25px
     &-block
       &__img::after
-        display: block
+        display: none
         transform: rotate(90deg)
         top: 141px
   .features
     &__title
       font-size: 18px
       line-height: 22px
+      & span:first-child
+        letter-spacing: -0px
+        margin-left: 3px
     &__subtitle
       font-size: 18px
       line-height: 22px
@@ -446,7 +451,7 @@
       padding: 0
       padding-bottom: 30px
     &_mobail
-      padding: 1px 1px 39px 1px
+      padding: 1px 1px 44px 1px
       line-height: 19px
       margin-bottom: 38px
       font-size: 12px
@@ -462,7 +467,7 @@
     &__input
       margin-bottom: 8px
     &__button
-      margin-top: 0px
+      margin-top: 3px
       margin-bottom: 25px
     &__text
       letter-spacing: -0.9px
@@ -475,9 +480,11 @@
         ul:nth-child(3)
           li:nth-child(3)
             span:nth-child(2)
-              flex-basis: 200px
-              margin-top: -9px
+              margin-top: -12px
               margin-bottom: -5px
+              line-height: 17px
+              letter-spacing: 1px
+          
   .footer
     & .halfsection-title
       margin-top: 0
@@ -486,16 +493,18 @@
     padding: 0
     padding-bottom: 26px
     &__title
-      margin-top: 64px
+      margin: 64px 0 29px 3px
       font-size: 18px
       line-height: 22px
-      margin-bottom: 29px
+      letter-spacing: 0.1px
     &-block
       // margin-right: 106px
       justify-content: flex-start
     &-list
+      letter-spacing: 0px
       &__img
         margin-right: 11px
   .form-call
     input
       margin-bottom: 10px
+  .modal-success

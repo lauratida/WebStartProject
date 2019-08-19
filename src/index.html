@@ -95,7 +95,7 @@
     <div class="container">
       <h2 class="section-title portfolio__title">
         <span class="span-block">Работая с 2007 года,</span>
-        <span class="span-block">мы сделали более 500 ремонтов в квартирах и домах</span>  </h2>
+        <span class="span-block">мы сделали более 500 ремонтов&nbsp;в&nbsp;квартирах&nbsp;и&nbsp;домах</span>  </h2>
     </div>
     <div class="container portfolio-contain wow bounceInLeft" data-wow-delay="0.5s">
         <div class="slider">
@@ -198,7 +198,16 @@
   </section>
 
   <section class="features">
-    <div class="features-titlerow"><div class="container"><div class="features-titlerow_wrap"><h3 class="features__title"><span class="span-block mobail_inline">Ремонт обойдется Вам дешевле, так как</span> <span class="span-block mobail_inline">мы используем качественные материалы по оптовым ценам</span></h3></div></div></div>
+    <div class="features-titlerow">
+      <div class="container">
+        <div class="features-titlerow_wrap">
+          <h3 class="features__title">
+            <span class="span-block mobail_inline">Ремонт обойдется Вам дешевле,&nbsp;так&nbsp;как</span> 
+            <span class="span-block mobail_inline">мы&nbsp;используем&nbsp;качественные материалы&nbsp;по&nbsp;оптовым&nbsp;ценам</span>
+          </h3>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="discount">
         <div class="discount__card">
@@ -218,7 +227,7 @@
       <div class="documents">
         <div class="documents__card">
           <div class="documents__img"><img src="img/features/docs_1.jpg" alt=""></div>
-          <span class="span-block documents__text">Гарантия на качество выполняемых работ</span>
+          <span class="span-block documents__text">Гарантия на качество выполняемых&nbsp;работ</span>
         </div>
         <div class="documents__card">
           <div class="documents__img"><img src="img/features/docs_2.jpg" alt=""></div>
@@ -248,7 +257,7 @@
           </li>
           <li class="interview-list__item">
             <span class="interview-list__number">3.</span>
-            <span class="interview-list__text">Где находится помещение, в&nbsp;котором будет <wbr>производиться ремонт?</span>
+            <span class="interview-list__text">Где находится помещение, в&nbsp;котором будет <wbr>производиться&nbsp;ремонт?</span>
           </li>
           <li class="interview-list__item">
             <span class="interview-list__number">4.</span>
@@ -287,12 +296,12 @@
         <div class="form brif__form">
           <h4 class="halfsection-title form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h4>
           <span class="halfsection-subtitle form__subtitle span-block">Для этого заполните форму ниже</span>
-          <form action="#" class="form">
+          <form method="POST" class="form">
             <input type="text" name="username" id="usernameb" class='input form__input' placeholder="Ваше имя">
             <input type="tel" name="userphone" id="userphoneb" class='input form__input phone' placeholder="Ваш телефон">
             <input type="email" name="usermail" id="usermailb" class='input form__input email' placeholder="Ваш e-mail">
             <div id="messageBox"></div>
-            <button class="button form__button">Рассчитать стоимость</button>
+            <input type="submit" name="formname" class="button form__button" value="Рассчитать стоимость">
           </form>
           <span class="form__text span-block">Мы перезвоним Вам в течение 60 секунд</span>
         </div>
@@ -354,7 +363,7 @@
         
       </div> 
       <!-- /.dialog-desc -->
-      <form id="dialog-form" class="dialog-form">
+      <form method="POST" id="dialog-form" class="dialog-form">
         <h3 class="dialog-form__title">Узнайте точную стоимость ремонта по телефону!</h3>
         <p class="dialog-form__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
         <input type="text" name="username" id="usernamem" class='input dialog-form__input' placeholder="Ваше имя">
@@ -371,7 +380,7 @@
     <div class="modal-success">
       <button class="modal-dialog__close" id="closesuccessmodal">&times;</button>
       <span id="sucess-user">Спасибо</span>
-      <span>, наш менеджер перезвонит Вам&nbsp;в&nbsp;течение 60 секунд </span>
+      <span>, наш менеджер перезвонит Вам&nbsp;в&nbsp;течении 60&nbsp;секунд </span>
     </div>
   </div>
 
@@ -388,5 +397,9 @@
   <script src="js/form.min.js"></script>
   <script src="js/map.min.js"></script>
   <script src="js/beautify.min.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/beautify.js"></script>
 </body>
 </html>

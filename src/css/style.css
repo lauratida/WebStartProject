@@ -853,7 +853,7 @@ a {
   line-height: 45px;
   margin: auto;
   text-align: center;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.1px;
   color: #000000;
 }
 
@@ -985,7 +985,7 @@ a {
 
 .navbar__button {
   margin-left: 30px;
-  margin-top: -2px;
+  margin-top: -4px;
 }
 
 .hero {
@@ -1111,10 +1111,12 @@ a {
           align-items: center;
 }
 
-.call-desc span:last-child {
+.call-desc a {
   -ms-flex-preferred-size: 40.5%;
       flex-basis: 40.5%;
   letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
+  margin-top: 22px;
 }
 
 .call-desc__text {
@@ -1131,6 +1133,7 @@ a {
   font-family: 'Museo Sans Cyrl 700';
   font-weight: 700;
   display: inline-block;
+  letter-spacing: -0.6px;
 }
 
 .form-call {
@@ -1146,7 +1149,7 @@ a {
 }
 
 .form-call__input {
-  margin-bottom: 29px;
+  margin-bottom: 28px;
   -ms-flex-preferred-size: 48.5%;
       flex-basis: 48.5%;
 }
@@ -1156,7 +1159,6 @@ a {
       flex-basis: 100%;
   font-size: 16px;
   padding: 25px 27px 27px 27px;
-  margin-left: -1px;
   letter-spacing: -0.2px;
 }
 
@@ -1339,12 +1341,11 @@ a {
 }
 
 .steps {
-  padding: 32px 0 99px 0;
+  padding: 34px 0 96px 0;
 }
 
 .steps__title {
   max-width: 670px;
-  letter-spacing: -1px;
 }
 
 .steps__subtitle {
@@ -1397,6 +1398,7 @@ a {
 .steps-block__text {
   text-align: center;
   letter-spacing: -0.7px;
+  line-height: 19px;
 }
 
 .features-titlerow {
@@ -1406,13 +1408,18 @@ a {
 }
 
 .features__title {
-  letter-spacing: -1px;
+  letter-spacing: -0.1px;
   color: #000000;
   font-size: 32px;
   line-height: 50px;
   max-width: 1020px;
   margin: auto;
   text-align: center;
+}
+
+.features__title span:first-child {
+  letter-spacing: -0px;
+  margin-left: -5px;
 }
 
 .features-subtitlerow {
@@ -1503,7 +1510,7 @@ a {
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
-  letter-spacing: -0.9px;
+  letter-spacing: 0.2px;
 }
 
 .halfsection-subtitle {
@@ -1512,7 +1519,10 @@ a {
 }
 
 .brif {
-  background: #ffc000;
+  background: url("../img/brif/bgcolor.jpg"), #ffffff;
+  background-position: left center, center right;
+  background-size: 50%, contain;
+  background-repeat: repeat-y, no-repeat;
 }
 
 .brif_mobail {
@@ -1553,7 +1563,7 @@ a {
   background-image: url("../img/brif/brif_bg.png");
   background-size: cover;
   height: 100%;
-  width: 49.5vw;
+  width: 49.45vw;
   position: absolute;
   left: 0%;
   top: 0%;
@@ -1581,8 +1591,7 @@ a {
 }
 
 .interview-list__item {
-  margin-bottom: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1592,6 +1601,10 @@ a {
           align-items: center;
   font-family: 'Museo Sans Cyrl 700';
   font-weight: 700;
+}
+
+.interview-list__item:nth-child(1) .interview-list__text {
+  margin-top: -2px;
 }
 
 .interview-list__item:nth-child(2) {
@@ -1607,7 +1620,7 @@ a {
 }
 
 .interview-list__text {
-  margin-left: 29px;
+  margin-left: 33px;
   -ms-flex-preferred-size: 405px;
       flex-basis: 405px;
   letter-spacing: 0px;
@@ -1639,7 +1652,8 @@ a {
 
 .form__title {
   line-height: 34px;
-  letter-spacing: -1px;
+  letter-spacing: 0.1px;
+  margin-left: 3px;
 }
 
 .form__subtitle {
@@ -1811,6 +1825,7 @@ a {
   background: #ffffff;
   cursor: pointer;
   z-index: 100;
+  outline: none;
 }
 
 .dialog-desc {
@@ -2045,6 +2060,10 @@ div.invalid {
   font-size: 14px;
 }
 
+#userphoned {
+  padding: 20px 23px 20px 29px;
+}
+
 #usernamed-error {
   position: absolute;
   top: 65px;
@@ -2065,6 +2084,12 @@ div.invalid {
 
 #userphonem {
   margin-bottom: 28px;
+}
+
+#userphonem-error {
+  position: absolute;
+  top: 400px;
+  left: 107px;
 }
 
 #usernameb-error {
@@ -2119,15 +2144,18 @@ div.invalid {
 
 @media (max-width: 420px) {
   #usernamem-error {
-    top: 211px;
+    top: 188px;
     left: 47px;
   }
   #userphonem-error {
-    top: 272px;
+    top: 250px;
     left: 47px;
   }
   #usernamed-error {
     top: 62px;
+  }
+  #userphoned {
+    padding: 20px 23px 20px 22px;
   }
   #userphoned-error {
     top: 140px;
@@ -2189,12 +2217,12 @@ div.invalid {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .call-desc span:last-child {
+  .call-desc a {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-top: 0;
   }
-  .call-desc span:last-child strong {
+  .call-desc a strong {
     display: inline;
   }
   .call-desc__text {
@@ -2229,6 +2257,13 @@ div.invalid {
   .container {
     max-width: 760px;
   }
+  .button:hover {
+    background-color: #ffd200;
+    cursor: default;
+  }
+  a {
+    cursor: default;
+  }
   .dialog-desc {
     display: none;
   }
@@ -2244,6 +2279,17 @@ div.invalid {
   .form-call input {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .card:hover {
+    border: 1px solid #e8e8e8;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .card:hover:after {
+    display: none;
+  }
+  .card__link:hover:after {
+    height: 3px;
   }
   .halfsection-title {
     font-size: 18px;
@@ -2292,6 +2338,9 @@ div.invalid {
   }
   .documents__card {
     margin-bottom: 30px;
+  }
+  .map {
+    cursor: default;
   }
 }
 
@@ -2372,6 +2421,13 @@ div.invalid {
   .contacts__title {
     max-width: 300px;
   }
+  .modal-success {
+    width: 270px;
+    height: 200px;
+    padding: 45px 30px;
+    line-height: 1.8;
+    z-index: 99999;
+  }
 }
 
 @media (max-width: 567px) {
@@ -2383,18 +2439,20 @@ div.invalid {
     border-radius: 5px;
   }
   .hero-block {
-    padding-top: 40px;
+    padding-top: 29px;
   }
   .hero-text__title {
     font-size: 22px;
     line-height: 27px;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
     margin-left: 5px;
+    letter-spacing: 0.1px;
   }
   .hero-text__subtitle {
     font-size: 16px;
     line-height: 20px;
     margin-left: 6px;
+    letter-spacing: -0.2px;
   }
   .hero-list {
     margin-top: 4px;
@@ -2415,8 +2473,8 @@ div.invalid {
     margin-left: 2px;
   }
   .hero-img {
-    margin-top: 20px;
-    margin-bottom: 14px;
+    margin-top: 39px;
+    max-width: 271px;
   }
   .dialog-form {
     padding: 34px 50px 34px 49px;
@@ -2463,11 +2521,17 @@ div.invalid {
   .features__subtitle {
     font-size: 18px;
   }
+  .section-title {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 420px) {
   .container {
     max-width: 277px;
+  }
+  .navbar-block {
+    padding: 17px 0;
   }
   .navbar__button {
     padding: 14px 26px;
@@ -2497,10 +2561,10 @@ div.invalid {
     margin-left: 6px;
     margin-top: -5px;
   }
-  .call-desc span:last-child {
+  .call-desc a {
     margin-top: 7px;
   }
-  .call-desc span:last-child strong {
+  .call-desc a strong {
     display: inline-block;
   }
   .form-call input {
@@ -2521,13 +2585,11 @@ div.invalid {
     font-size: 18px;
   }
   .portfolio {
-    padding: 42px 0 60px 0;
+    padding: 38px 0 60px 0;
   }
   .portfolio__title {
-    font-size: 18px;
-    line-height: 21.6px;
     margin-bottom: 40px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
   .slider__img {
     width: 246px;
@@ -2545,9 +2607,12 @@ div.invalid {
   .price__title {
     margin-bottom: 8px;
     max-width: 220px;
+    letter-spacing: -1px;
   }
   .price__subtitle {
     margin-bottom: 18px;
+    letter-spacing: -0.1px;
+    margin-left: -16px;
   }
   .card {
     max-width: 272px;
@@ -2557,11 +2622,12 @@ div.invalid {
   }
   .card__title {
     margin: 0px 0 -3px 4px;
-    letter-spacing: -0.9px;
+    letter-spacing: 0.05px;
+    margin-left: -1px;
     font-size: 14px;
   }
   .card__link {
-    letter-spacing: -0.9px;
+    letter-spacing: -0.1px;
   }
   .card__link:after {
     width: 99%;
@@ -2576,26 +2642,26 @@ div.invalid {
   .section-title {
     font-size: 18px;
     line-height: 22px;
-    letter-spacing: -1px;
   }
   .section-subtitle {
     font-size: 14px;
-    letter-spacing: 0.82px;
   }
   .halfsection-title {
     line-height: 21.35px;
     margin-top: 42px;
-    max-width: 230px;
+    max-width: 240px;
   }
   .interview {
     padding: 0;
   }
   .interview__title {
-    margin-bottom: 11px;
+    margin-bottom: 13px;
+    margin-left: 1px;
   }
   .interview__subtitle {
     max-width: 190px;
-    line-height: 19px;
+    line-height: 18px;
+    margin-left: 4px;
   }
   .interview-list {
     font-size: 12px;
@@ -2604,6 +2670,7 @@ div.invalid {
     -ms-flex-preferred-size: 232px;
         flex-basis: 232px;
     margin-left: 8px;
+    letter-spacing: 1px;
   }
   .interview-list__item {
     margin-bottom: 26px;
@@ -2612,7 +2679,8 @@ div.invalid {
     padding: 1px 0 47px 0;
   }
   .steps__subtitle {
-    margin-top: 9px;
+    margin-top: 10px;
+    margin-left: 3px;
   }
   .steps-block {
     -webkit-box-pack: center;
@@ -2641,7 +2709,7 @@ div.invalid {
     margin-bottom: 25px;
   }
   .steps-block__img::after {
-    display: block;
+    display: none;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
     top: 141px;
@@ -2649,6 +2717,10 @@ div.invalid {
   .features__title {
     font-size: 18px;
     line-height: 22px;
+  }
+  .features__title span:first-child {
+    letter-spacing: -0px;
+    margin-left: 3px;
   }
   .features__subtitle {
     font-size: 18px;
@@ -2712,7 +2784,7 @@ div.invalid {
     padding-bottom: 30px;
   }
   .brif_mobail {
-    padding: 1px 1px 39px 1px;
+    padding: 1px 1px 44px 1px;
     line-height: 19px;
     margin-bottom: 38px;
     font-size: 12px;
@@ -2731,7 +2803,7 @@ div.invalid {
     margin-bottom: 8px;
   }
   .form__button {
-    margin-top: 0px;
+    margin-top: 3px;
     margin-bottom: 25px;
   }
   .form__text {
@@ -2741,10 +2813,10 @@ div.invalid {
     line-height: 24px;
   }
   .brif_mobail div:nth-child(1) div:nth-child(1) ul:nth-child(3) li:nth-child(3) span:nth-child(2) {
-    -ms-flex-preferred-size: 200px;
-        flex-basis: 200px;
-    margin-top: -9px;
+    margin-top: -12px;
     margin-bottom: -5px;
+    line-height: 17px;
+    letter-spacing: 1px;
   }
   .footer .halfsection-title {
     margin-top: 0;
@@ -2755,15 +2827,18 @@ div.invalid {
     padding-bottom: 26px;
   }
   .contacts__title {
-    margin-top: 64px;
+    margin: 64px 0 29px 3px;
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 29px;
+    letter-spacing: 0.1px;
   }
   .contacts-block {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .contacts-list {
+    letter-spacing: 0px;
   }
   .contacts-list__img {
     margin-right: 11px;

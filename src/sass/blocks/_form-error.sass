@@ -4,7 +4,8 @@ div.invalid
   border: none
   color: $error
   font-size: 14px
-
+#userphoned
+  padding: 20px 23px 20px 29px
 #usernamed-error
   position: absolute
   top: 65px
@@ -19,6 +20,10 @@ div.invalid
   left: 107px
 #userphonem
   margin-bottom: 28px
+#userphonem-error
+  position: absolute
+  top: 400px
+  left: 107px
 #usernameb-error
   position: absolute
   top: 65px
@@ -47,7 +52,6 @@ div.invalid
   #userphoned-error
     top: 146px
     left: 6px
-// @media (max-width: 768px)
 @media (max-width: 567px)
   #usernamem-error
     top: 195px
@@ -57,15 +61,17 @@ div.invalid
     left: 57px
 @media (max-width: 420px)
   #usernamem-error
-    top: 211px
+    top: 188px
     left: 47px
   #userphonem-error 
-    top: 272px
+    top: 250px
     left: 47px
   #usernamed-error
     top: 62px
-  #userphoned-error
-    top: 140px
+  #userphoned
+    padding: 20px 23px 20px 22px
+    &-error
+      top: 140px
   #usernameb-error, #userphoneb-error, #usermailb-error, #usernamed-error, #userphoned-error
     font-size: 10px
   #usernameb-error

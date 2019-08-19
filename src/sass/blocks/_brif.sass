@@ -3,12 +3,16 @@
     +bold
     font-size: 22px
     line-height: 33px
-    letter-spacing: -0.9px
+    letter-spacing: 0.2px
   &-subtitle
     font-size: 16px
     line-height: 45px
 .brif
-  background: $dop-color
+  background: url('../img/brif/bgcolor.jpg'), $white
+  background-position: left center, center right
+  background-size: 50%, contain
+  background-repeat: repeat-y, no-repeat
+  
   &_mobail
     display: none
     background-color: $dop-color
@@ -33,7 +37,7 @@
       background-image: url('../img/brif/brif_bg.png')
       background-size: cover
       height: 100%
-      width: 49.5vw
+      width: 49.45vw
       position: absolute
       left: 0%
       top: 0%
@@ -51,12 +55,14 @@
     font-size: 18px
     padding: 0
     &__item
-      margin-bottom: 20px
-      margin-bottom: 23px
+      margin-bottom: 24px
       max-width: 500px
       display: flex
       align-items: center
       +bold
+      &:nth-child(1)
+        & .interview-list__text
+          margin-top: -2px
       &:nth-child(2)
         margin-bottom: 35px
       &:nth-child(3)
@@ -64,7 +70,7 @@
         & .interview-list__number
           margin-top: -12px
     &__text
-      margin-left: 29px
+      margin-left: 33px
       flex-basis: 405px
       letter-spacing: 0px
     &__number
@@ -84,7 +90,8 @@
   position: relative
   &__title
     line-height: 34px
-    letter-spacing: -1px
+    letter-spacing: 0.1px
+    margin-left: 3px
   &__subtitle
     margin-bottom: 37px
   &__input
